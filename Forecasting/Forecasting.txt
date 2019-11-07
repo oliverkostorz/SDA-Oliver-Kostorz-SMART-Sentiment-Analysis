@@ -1,0 +1,7 @@
+Name of Quantlet: Forecasting
+
+Published in: Smart Data Analytics / University of St. Gallen (HSG)
+
+Description: This Quantlet calculates a test sample to validate the predictions made with data from the web scraping Quantlet.
+
+Keywords: Forecasting, Valuation, web scraping, automatic sentiment analysis, stock-market news
