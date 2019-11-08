@@ -139,7 +139,7 @@ success_counter = len(url_list)-fault_counter
 
 print('Hello ' + os.getlogin() + ',')
 print('within the last minutes, ' + str(success_counter) + ' news articles could be assessed for training of the algorithm.')
-print('Unfortunately, ' + str(fault_counter) + ' articles did not fullfil the requierments for assessment and were not included in the calculation.')
+print('Unfortunately, ' + str(fault_counter) + ' articles did not fulfill the requirements for assessment and were not included in the calculation.')
 print('Among the most common reasons for exclusion are:')
 print('-Publication was too recent to gather enough return data')
 print('-Article was published on weekends and might be outdated by the time the stock exchange opens again')
