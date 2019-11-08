@@ -118,7 +118,7 @@ for link in url_list:
         #Save in dict
         for word in filtered_sentence:
             if word in data.values:
-                data.set_value(data['word'] == word, 'return(24h)', #adressed cell
+                data.set_value(data['word'] == word, 'return(24h)', #addressed cell
                                round((((data.get_value(data.loc[data['word']==word].index[0], 2, takeable = True)*
                                  data.get_value(data.loc[data['word']==word].index[0], 1, takeable = True))+return_24)/
                                 (data.get_value(data.loc[data['word']==word].index[0], 1, takeable = True)+1)), 4)) #change in cell
