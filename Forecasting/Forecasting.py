@@ -115,7 +115,7 @@ for link in test_urls:
         for word in filtered_sentence:
             if word in data.values:
                 return_prediction = ((return_prediction * counter) + data.get_value(data.loc[data['word'] == word].index[0], 2, takeable = True))/ (counter + 1)
-                volatility_prediction = ((volatility_prediction * counter) + data.get_value(data.loc[data['word'] == 'ab'].index[0], 3, takeable = True))/(counter + 1)
+                volatility_prediction = ((volatility_prediction * counter) + data.get_value(data.loc[data['word'] == word].index[0], 3, takeable = True))/(counter + 1)
                 counter = counter + 1
             else:
                 pass
