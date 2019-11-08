@@ -49,8 +49,8 @@ data = pandas.read_csv(os.path.join(wd, 'data.csv'))
 with open(os.path.join(wd, 'test_links.txt'), "rb") as fp:   # Unpickling
     test_urls = pickle.load(fp)
 
-#Add additional links to news articels to use for training the algorithm
-#Refer to Meta-Information for full guide and requierments
+#Add additional links to news articles to use for training the algorithm
+#Refer to Meta-Information for full guide and requirements
 try:
     test_urls.append()
 except:
@@ -130,12 +130,12 @@ for link in test_urls:
 success_counter = len(test_urls)-fault_counter
 
 print('Hello ' + os.getlogin() + ',')
-print('as a test-sample of the predictive power of the liabary, ' + str(success_counter) + ' news articels could be assessed.')
-print('Unfortunately, ' + str(fault_counter) + ' articels did not fullfil the requierments and were not included in the calculation.')
+print('as a test-sample of the predictive power of the liabary, ' + str(success_counter) + ' news articles could be assessed.')
+print('Unfortunately, ' + str(fault_counter) + ' articles did not fullfil the requierments and were not included in the calculation.')
 print('Among the most common reasons for exclusion are:')
 print('-Publication was too recent to gather enough return data')
-print('-Articel was published on weekends and might be outdated by the time the stock exchange opens again')
-print('-Articel was not published on Finanzen.net directly but rather refers to another website')
+print('-Article was published on weekends and might be outdated by the time the stock exchange opens again')
+print('-Article was not published on Finanzen.net directly but rather refers to another website')
 print('-Publication date is outside requestable return range (60 days)')
 print('Please refer to the Meta-Information for further explanations.')
 print('However, we will continue with the valid data.')
