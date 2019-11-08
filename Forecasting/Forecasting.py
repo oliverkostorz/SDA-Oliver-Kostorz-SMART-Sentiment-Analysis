@@ -130,8 +130,8 @@ for link in test_urls:
 success_counter = len(test_urls)-fault_counter
 
 print('Hello ' + os.getlogin() + ',')
-print('as a test-sample of the predictive power of the liabary, ' + str(success_counter) + ' news articles could be assessed.')
-print('Unfortunately, ' + str(fault_counter) + ' articles did not fullfil the requierments and were not included in the calculation.')
+print('as a test-sample of the predictive power of the library, ' + str(success_counter) + ' news articles could be assessed.')
+print('Unfortunately, ' + str(fault_counter) + ' articles did not fulfill the requirements and were not included in the calculation.')
 print('Among the most common reasons for exclusion are:')
 print('-Publication was too recent to gather enough return data')
 print('-Article was published on weekends and might be outdated by the time the stock exchange opens again')
