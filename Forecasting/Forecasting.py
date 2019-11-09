@@ -36,7 +36,7 @@ def roundtime(time):
 
 #Loads relevant data from web scraping process
 try:
-    wd = os.path.join(os.getcwd(), 'SDA-Oliver-Kostorz-SMART-Sentiment-Analysis')
+    wd = os.path.join(os.getcwd(), 'SDA-Oliver-Kostorz-SMART-Sentiment-Analysis-master')
 except:
     print('Please specify path to working directiory manually.')
     
