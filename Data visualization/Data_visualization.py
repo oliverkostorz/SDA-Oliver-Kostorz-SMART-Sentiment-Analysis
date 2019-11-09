@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov  4 21:44:54 2019
-
-@author: oliver
-"""
-
 #Import packages
 import pandas
 import numpy
@@ -15,7 +7,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 try:
-    wd = os.path.join(os.getcwd(), 'SDA-Oliver-Kostorz-SMART-Sentiment-Analysis')
+    wd = os.path.join(os.getcwd(), 'SDA-Oliver-Kostorz-SMART-Sentiment-Analysis-master')
 except:
     print('Please specify path to working directiory manually.')
     
