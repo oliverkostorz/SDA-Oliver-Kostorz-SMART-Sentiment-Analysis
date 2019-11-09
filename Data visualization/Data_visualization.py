@@ -5,6 +5,7 @@ import os
 from wordcloud import WordCloud
 from PIL import Image
 import matplotlib.pyplot as plt
+from PIL import Image
 
 try:
     wd = os.path.join(os.getcwd(), 'SDA-Oliver-Kostorz-SMART-Sentiment-Analysis-master')
@@ -54,6 +55,17 @@ ret_forecast_eval = evaluation.plot(x = 'return realization', y = 'return predic
                                     ylim = ([min(evaluation['return realization'].min(), evaluation['return prediction'].min())-1, max(evaluation['return realization'].max(), evaluation['return prediction'].max())+1]))
 plt.ylabel('return prediction')
 ret_forecast_eval.figure.savefig(os.path.join(wd, 'ret_for_eva.png'), transperent = True)
+img = Image.open(os.path.join(wd, 'ret_for_eva.png'))
+img = img.convert("RGBA")
+datas = img.getdata()
+newData = []
+for item in datas:
+    if item[0] == 255 and item[1] == 255 and item[2] == 255:
+        newData.append((255, 255, 255, 0))
+    else:
+        newData.append(item)
+img.putdata(newData)
+img.save(os.path.join(wd, 'ret_for_eva.png'), "PNG")
 
 #Scatterplot prediction-actual volatility
 vol_forecast_evaluation = evaluation.plot(x = 'volatility realization', y = 'volatility prediction', style = 'o',
@@ -62,3 +74,14 @@ vol_forecast_evaluation = evaluation.plot(x = 'volatility realization', y = 'vol
                                           ylim = ([min(evaluation['volatility realization'].min(), evaluation['volatility prediction'].min())-0.1, max(evaluation['volatility realization'].max(), evaluation['volatility prediction'].max())+0.1]))
 plt.ylabel('volatility prediction')
 vol_forecast_evaluation.figure.savefig(os.path.join(wd, 'vol_for_eva.png'), transperent = True)
+img = Image.open(os.path.join(wd, 'vol_for_eva.png'))
+img = img.convert("RGBA")
+datas = img.getdata()
+newData = []
+for item in datas:
+    if item[0] == 255 and item[1] == 255 and item[2] == 255:
+        newData.append((255, 255, 255, 0))
+    else:
+        newData.append(item)
+img.putdata(newData)
+img.save(os.path.join(wd, 'vol_for_eva.png'), "PNG")
