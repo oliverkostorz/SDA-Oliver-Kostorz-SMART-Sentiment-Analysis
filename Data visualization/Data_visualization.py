@@ -62,8 +62,3 @@ vol_forecast_evaluation = evaluation.plot(x = 'volatility realization', y = 'vol
                                           ylim = ([min(evaluation['volatility realization'].min(), evaluation['volatility prediction'].min())-0.1, max(evaluation['volatility realization'].max(), evaluation['volatility prediction'].max())+0.1]))
 plt.ylabel('volatility prediction')
 vol_forecast_evaluation.figure.savefig(os.path.join(wd, 'vol_for_eva.png'), transperent = True)
-
-
-
-#Compare to sentiment of lexikas
-
