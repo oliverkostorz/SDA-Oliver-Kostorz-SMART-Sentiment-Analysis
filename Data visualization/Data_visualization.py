@@ -32,8 +32,8 @@ words_flop_return = str(wordcloud_flop_return.values)
 words_top_volatility = str(wordcloud_top_volatility.values)
 words_flop_volatility = str(wordcloud_flop_volatility.values)
 
-flop = numpy.array(Image.open(os.path.join(wd, 'flop.png')))
-top = numpy.array(Image.open(os.path.join(wd, 'top.png')))
+flop = numpy.array(Image.open(os.path.join(wd, 'flop.jpg')))
+top = numpy.array(Image.open(os.path.join(wd, 'top.jpg')))
 
 wc_top_return = WordCloud(max_words = 500, mask = top, mode = 'RGBA', background_color = None).generate(words_top_return)
 wc_top_return.to_file(os.path.join(wd, 'WordCloud_top_return.png'))
