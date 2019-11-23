@@ -32,19 +32,19 @@ words_flop_return = str(wordcloud_flop_return.values)
 words_top_volatility = str(wordcloud_top_volatility.values)
 words_flop_volatility = str(wordcloud_flop_volatility.values)
 
-com = numpy.array(Image.open(os.path.join(wd, 'com.png')))
-banker = numpy.array(Image.open(os.path.join(wd, 'banker.jpg')))
+flop = numpy.array(Image.open(os.path.join(wd, 'flop.png')))
+top = numpy.array(Image.open(os.path.join(wd, 'top.png')))
 
-wc_top_return = WordCloud(max_words = 500, mask = banker, mode = 'RGBA', background_color = None).generate(words_top_return)
+wc_top_return = WordCloud(max_words = 500, mask = top, mode = 'RGBA', background_color = None).generate(words_top_return)
 wc_top_return.to_file(os.path.join(wd, 'WordCloud_top_return.png'))
 
-wc_flop_return = WordCloud(max_words = 500, mask = com, mode = 'RGBA', background_color = None).generate(words_flop_return)
+wc_flop_return = WordCloud(max_words = 500, mask = flop, mode = 'RGBA', background_color = None).generate(words_flop_return)
 wc_flop_return.to_file(os.path.join(wd, 'WordCloud_flop_return.png'))
 
-wc_top_volatility = WordCloud(max_words = 500, mask = banker, mode = 'RGBA', background_color = None).generate(words_top_volatility)
+wc_top_volatility = WordCloud(max_words = 500, mask = top, mode = 'RGBA', background_color = None).generate(words_top_volatility)
 wc_top_volatility.to_file(os.path.join(wd, 'WordCloud_top_volatility.png'))
 
-wc_flop_volatility = WordCloud(max_words = 500, mask = com, mode = 'RGBA', background_color = None).generate(words_flop_volatility)
+wc_flop_volatility = WordCloud(max_words = 500, mask = flop, mode = 'RGBA', background_color = None).generate(words_flop_volatility)
 wc_flop_volatility.to_file(os.path.join(wd, 'WordCloud_flop_volatility.png'))
 
 
