@@ -40,9 +40,7 @@ def roundtime(time):
     return time
 
 ###Data mining
-#List containing relevant URLs for news-sample (preliminary examples while coding)
-#News must be at least 5 days old!!!
-
+#List containing relevant URLs for news-sample
 with open(os.path.join(wd, 'links.txt'), "rb") as fp:   # Unpickling
     url_list = pickle.load(fp)
 
