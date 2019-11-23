@@ -111,7 +111,7 @@ for link in test_urls:
         #Predict return and volatility by words in news article
         return_prediction = 0
         volatility_prediction = 0
-        counter = 1
+        counter = 0
         for word in filtered_sentence:
             if word in data.values:
                 return_prediction = ((return_prediction * counter) + data.get_value(data.loc[data['word'] == word].index[0], 2, takeable = True))/ (counter + 1)
